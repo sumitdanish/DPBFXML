@@ -64,13 +64,13 @@ public final class StoringWebHistory{
     {
 //        WebHistory webHistory = we.getHistory();
 //        ObservableList<WebHistory.Entry> entry = webHistory.getEntries();
-        WebHistoryBeans webHistoryBeans = new WebHistoryBeans();
-        webHistoryBeans.setUrl(we);
-        fout = new FileOutputStream(new File(tempDirFOrWebHistory+File.separator+"DPWebHIstory"+File.separator+"urlHistory.dp"),true); 
-        oout = new AppendingObjectOutputStream(fout);
-        oout.writeObject(webHistoryBeans);
-        oout.flush();
-        oout.close();
+//        WebHistoryBeans webHistoryBeans = new WebHistoryBeans();
+//        webHistoryBeans.setUrl(we);
+//        fout = new FileOutputStream(new File(tempDirFOrWebHistory+File.separator+"DPWebHIstory"+File.separator+"urlHistory.dp"),true); 
+//        oout = new AppendingObjectOutputStream(fout);
+//        oout.writeObject(webHistoryBeans);
+//        oout.flush();
+//        oout.close();
     }
     
     public ArrayList<WebHistoryBeans> readHistoryFromFile() throws FileNotFoundException, IOException, ClassNotFoundException

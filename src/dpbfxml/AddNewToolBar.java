@@ -91,7 +91,7 @@ public class AddNewToolBar{
             }
         });
         //urlTextfield.valueProperty().addListener(getComboboxEventHandler(addNewWebView));
-        addWebHistoryInTextField(urlTextfield);
+        //addWebHistoryInTextField(urlTextfield);
         webHistory.getEntries().addListener(newWebHistory.getListChangeListener(addNewWebView, urlTextfield)); 
         toolBar = new ToolBar(backButton,forwardButton,refreshButton,urlTextfield,goButton,progressIndicator);
         goButton.setOnAction(getEvent(addNewWebView)); 
@@ -135,6 +135,7 @@ public class AddNewToolBar{
         ChangeListener changeListner = new ChangeListener() {
             @Override
             public void changed(ObservableValue ov, Object t, Object t1) {
+               /// System.out.println(" > HI > "+we.getHistory().getEntries());
                  if(!(t.toString().equals(t1.toString())))
                  {
                      int offset = urlTextfield.getSelectionModel().getSelectedIndex()-webHistory.getCurrentIndex(); 
