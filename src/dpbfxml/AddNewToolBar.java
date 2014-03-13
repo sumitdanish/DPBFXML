@@ -142,7 +142,7 @@ public class AddNewToolBar{
                      if(offset <=0)
                      {
                          try {
-                             StoringWebHistory.getStoringWebHistory().writeHistoryInFile(t1.toString());
+                             StoringWebHistory.getStoringWebHistory().writeHistoryInFile(ov);
                              urlTextfield.setValue(t1.toString());
                          } catch (IOException ex) {
                              Logger.getLogger(AddNewToolBar.class.getName()).log(Level.SEVERE, null, ex);

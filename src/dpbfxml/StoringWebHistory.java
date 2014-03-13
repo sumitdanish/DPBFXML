@@ -18,6 +18,7 @@ import java.io.OutputStream;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Map;
+import javafx.beans.value.ObservableValue;
 import javafx.collections.ObservableList;
 import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebHistory;
@@ -60,8 +61,9 @@ public final class StoringWebHistory{
        // fileProperties=File.createTempFile("url","dp", createHistoryDirectory);
        
     }
-    public void writeHistoryInFile(String we) throws FileNotFoundException, IOException
+    public void writeHistoryInFile(ObservableValue ov) throws FileNotFoundException, IOException
     {
+          
 //        WebHistory webHistory = we.getHistory();
 //        ObservableList<WebHistory.Entry> entry = webHistory.getEntries();
 //        WebHistoryBeans webHistoryBeans = new WebHistoryBeans();
