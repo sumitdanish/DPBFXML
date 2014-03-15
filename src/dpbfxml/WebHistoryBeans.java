@@ -5,52 +5,48 @@
  */
 
 package dpbfxml;
-
-import java.io.Serializable;
-import javafx.collections.ObservableList;
-import javafx.scene.web.WebEngine;
-import javafx.scene.web.WebHistory;
-
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 /**
  *
  * @author SUMMITM
  */
-public final class WebHistoryBeans implements Serializable{
-    private ObservableList<WebHistory.Entry> urlList;
-    private transient WebEngine webEngine;
-    private String url;
+@XmlRootElement
+public class WebHistoryBeans {
     
+    private String url;
+    private String title;
+    private String date;
     public WebHistoryBeans()
     {
-       // this.webEngine = we;
         
-    }
-    
-    public ObservableList<WebHistory.Entry> getUrlList() {
-        return urlList;
-    }
-
-    public void setUrlList(ObservableList<WebHistory.Entry> urlList) {
-        
-        this.urlList = urlList;
-    }
-    
-    
-    @Override
-    public String toString()
-    {
-        return this.getUrl();
     }
 
     public String getUrl() {
         return url;
     }
-
+    
+       @XmlElement
     public void setUrl(String url) {
         this.url = url;
     }
-  
-    
-    
-    
+
+    public String getTitle() {
+        return title;
+    }
+
+       @XmlElement
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+       @XmlElement
+    public void setDate(String date) {
+        this.date = date;
+    }  
 }
